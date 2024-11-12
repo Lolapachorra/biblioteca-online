@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca online</title>
+    <link rel="icon" href="./favicons/favicons-16x16.png">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Biblioteca online</a> </div>
+            <div class="search-bar">
+                
+                <input type="text" placeholder="Buscar livro...">
+                <button >
+                    <span class="material-symbols-outlined">
+                        search
+                        </span>
+                </button>
+                
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./contato.html#containersobre">Quem somos</a> </li>
+                <li><a href="./contato.html#contact">Contate-nos</a></li>
+                <button id="signupBtn"><a href="#">Cadastre-se</a></button>
+                <button id="loginBtn"><a href="#">Entrar</a></button>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <br>
+        <br>
+        <br>
+        <h2>Categorias</h2>
+        
+        <ul class="nav">
+            <li><a href="#"><span>Tecnologia</span></a></li>
+            <li><a href="#"><span>Geografia</span></a></li>
+            <li><a href="#"><span>Português</span></a></li>
+            <li><a href="#"><span>História</span></a></li>
+            <li><a href="#"><span>Linguagens</span></a></li>
+            <li><a href="#"><span>Quimica</span></a></li>
+            <li><a href="#"><span>Matematica</span></a></li>
+        </ul>
+    </div>
+
+   <div class="main" id="main-content">
+  <h2>Livros disponiveis</h2>
+  <div class="carousel">
+    <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel-track">
+        <div class="carousel-slide">
+            <img src="https://via.placeholder.com/150x200?text=Livro+1" alt="Livro 1">
+            <h3>Título do Livro 1</h3>
+            <p>Descrição breve sobre o Livro 1. Descubra mais sobre esta incrível obra.</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://via.placeholder.com/150x200?text=Livro+2" alt="Livro 2">
+            <h3>Título do Livro 2</h3>
+            <p>Este é um livro inspirador que vale a pena ler. Explore sua história.</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://via.placeholder.com/150x200?text=Livro+3" alt="Livro 3">
+            <h3>Título do Livro 3</h3>
+            <p>Uma leitura que mudará sua visão sobre o tema abordado.</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://via.placeholder.com/150x200?text=Livro+4" alt="Livro 4">
+            <h3>Título do Livro 4</h3>
+            <p>Explore o mundo deste livro, uma obra de arte literária.</p>
+        </div>
+    </div>
+    <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+</div>
+</div>
+  
+</div>
+
+<footer>
+<div class="footerContainer">
+    <div class="socialIcons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="footerNav">
+        <ul>
+            <li><a href="">Doe</a></li>
+            
+        </ul>
+    </div>
+   
+</div>
+<div class="footerBottom">
+    <p> Feito por <span class="designer">Davi Rodrigues</span></p>
+   </div>
+</footer>
+
+
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" data-modal="signupModal">&times;</span>
+        <h2>Cadastre-se</h2>
+        <form>
+            <label for="signup-name">Nome:</label>
+            <input type="text" id="signup-name" placeholder="Seu nome" required>
+            
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" placeholder="Seu email" required>
+            
+            <label for="signup-password">Senha:</label>
+            <input type="password" id="signup-password" placeholder="Sua senha" required>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+        <button class="modal-close-btn" data-modal="signupModal">Fechar</button>
+    </div>
+</div>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" data-modal="loginModal">&times;</span>
+        <h2>Entrar</h2>
+        <form>
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" placeholder="Seu email" required>
+            
+            <label for="login-password">Senha:</label>
+            <input type="password" id="login-password" placeholder="Sua senha" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        <button class="modal-close-btn" data-modal="loginModal">Fechar</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
