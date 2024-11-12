@@ -1,0 +1,205 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.navbar{
+    background-color: crimson;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+    z-index: 1;
+    border: solid 1px black;
+    
+    
+}
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+li a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+button{
+    background-color: black;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+button a{
+    color: white;
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    max-width: 400px; 
+}
+
+.search-bar input {
+    flex-grow: 1; 
+    padding: 10px;
+    border-radius: 10px 0 0 10px; 
+    width: 100%;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 0 10px 10px 0; 
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+ button:active {
+    transform: scale(0.95);
+}
+footer{
+    background-color: crimson;
+    margin-top: auto;
+    display: flex;
+    z-index: 1;
+    border: solid 1px black;
+    
+}
+.footerContainer{
+    
+  width: 100%;
+  padding: 70px 30px 20px;
+  
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: black;
+    transition: 0.5;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+     display: flex;
+    justify-content: center;
+}
+.footerNav ul li a{
+      color: white;
+      margin: 20px;
+      font-size: 1.3em;
+      opacity: 0.7;
+      transition: 0.5;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: rgb(255, 0, 51);
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+
+.footerContainer {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar{
+    position: fixed;
+    background-color: crimson;
+    height: 100%;
+    width: 200px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border: 1px solid;
+}
+.sidebar h2{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.sidebar ul li{
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar ul li a{
+    color: white;
+    padding: 0 20px;
+}
+.sidebar ul li a:hover{
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+.main{
+    margin-left: 200px;
+    padding: 5px;
+}
+.main h2{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
