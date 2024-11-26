@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 * {
     text-decoration: none;
     margin: 0;
@@ -10,11 +18,6 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
 .navbar {
     background-color: crimson;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -153,37 +156,7 @@ footer {
     width: 100%;
     height: 100%;
 }
-.sidebar {
-    position: fixed;
-    background-color: crimson;
-    height: 100%;
-    width: 12.5rem;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    border: 0.06rem solid;
-}
-.sidebar h2 {
-    text-align: center;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    color: black;
-    padding: 0.9rem;
-    margin-bottom: 1.25rem;
-}
-.sidebar ul li {
-    margin: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-}
-.sidebar ul li a {
-    color: white;
-    padding: 0 1.25rem;
-}
-.sidebar ul li a:hover {
-    margin-left: 1.25rem;
-    transition: 0.4s;
-}
+
 .main {
     margin-left: 12.5rem;
     padding: 0.3rem;
@@ -280,7 +253,77 @@ form button:hover {
     background-color: #ccc;
 }
 
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto; /* Centraliza o carrossel */
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
 
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #fff;
+}
+.carousel-slide img {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.carousel-slide h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+.carousel-slide p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
 
 .cancel-button {
     background-color: crimson;
