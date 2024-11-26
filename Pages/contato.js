@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const divider = document.querySelector('.section-divider');
+    const dividers = document.querySelectorAll('.section-divider'); // Seleciona todos os divisores
 
     // Configuração do observer
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
+            const divider = entry.target; // Obtém o divisor atual
             if (entry.isIntersecting) {
                 divider.classList.add('visible'); // Adiciona a classe quando entra na tela
             } else {
@@ -12,8 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, { threshold: 0.1 }); // threshold define quando a animação ativa (10% visível)
 
-    observer.observe(divider); // Observa a linha
+    dividers.forEach(divider => observer.observe(divider)); // Observa todos os divisores
 });
+
 
 function setFavicon(iconClass) {
     const canvas = document.createElement('canvas');

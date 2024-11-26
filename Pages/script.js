@@ -10,27 +10,26 @@ function setFavicon(iconClass) {
 
     // Define o ícone do Font Awesome
     context.font = '48px FontAwesome';
-    context.fillStyle = 'crimson';  // Cor do ícone
+    context.fillStyle = 'crimson';  
     context.textAlign = 'center';
     context.textBaseline = 'middle';
 
-    // Desenha o ícone no centro do canvas
-    context.fillText('\uf02d', 32, 32); // '\uf013' é o código unicode para o ícone de engrenagem (gear)
+    
+    context.fillText('\uf02d', 32, 32); 
 
-    // Cria o favicon a partir do canvas
+
     const link = document.createElement('link');
     link.rel = 'icon';
     link.href = canvas.toDataURL('image/png');
     document.head.appendChild(link);
 }
 
-// Chama a função com o ícone desejado
+
 document.addEventListener('DOMContentLoaded', () => {
-    setFavicon('fa-book'); // ícone aleatório: engrenagem (fa-gear)
+    setFavicon('fa-book'); 
 });
 
-// Seleciona os botões e os modais
-// Seleciona os botões e os modais
+
 const signupBtn = document.getElementById("signupBtn");
 const loginBtn = document.getElementById("loginBtn");
 const signupModal = document.getElementById("signupModal");
@@ -41,12 +40,12 @@ function openModal(modal) {
     if (modal) modal.style.display = "flex";
 }
 
-// Função para fechar o modal
+
 function closeModal(modal) {
     if (modal) modal.style.display = "none";
 }
 
-// Eventos para abrir os modais
+
 if (signupBtn && signupModal) {
     signupBtn.addEventListener("click", () => openModal(signupModal));
 }
@@ -77,14 +76,14 @@ function showSlide(index) {
     const track = document.querySelector(".carousel-track");
 
     if (index >= slides.length) {
-        currentSlide = 0; // Volta ao primeiro slide
+        currentSlide = 0; 
     } else if (index < 0) {
-        currentSlide = slides.length - 1; // Volta ao último slide
+        currentSlide = slides.length - 1; 
     } else {
         currentSlide = index;
     }
 
-    // Move o track para mostrar o slide atual
+   
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
@@ -96,5 +95,5 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
-// Inicializa o carrossel no primeiro slide
+
 showSlide(currentSlide);
