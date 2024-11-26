@@ -197,6 +197,11 @@ footer {
     padding-bottom: 3.1rem;
 }
 
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: crimson;
+}
 
 .modal {
     display: none; /* Oculta o modal inicialmente */
@@ -220,10 +225,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    color: crimson;
-}
-.modal-content h2{
-    color: black
+    
 }
 
 /* Botão de fechar */
@@ -346,3 +348,61 @@ form button:hover {
     right: 10px;
 }
 
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cancel-button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+}
+
+.download-button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: darkgreen;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
